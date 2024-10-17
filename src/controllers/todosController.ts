@@ -14,7 +14,6 @@ export async function getTodos(req: Request, res: Response) {
 
 export async function addTodo(req: Request, res: Response) {
   let model: createTodoModel = req.body;
-  console.log(model);
   await createTodo(model);
   res.status(HttpStatusCodes.CREATED).send();
 }
